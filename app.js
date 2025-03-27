@@ -25,6 +25,10 @@ app.put("/posts/:id", (req, res) => {
 app.patch("/posts/:id", (req, res) => {
   res.send("Ho modificato parzialmente un post");
 });
+// DESTROY -> cancello un elemento
+app.delete("/posts/:id", (req, res) => {
+  res.send("Ho cancellato un post");
+});
 
 // AVVIO IL SERVER SULLA PORTA 3000 E CONTROLLO SU POSTMAN
 app.listen(port, () => {
