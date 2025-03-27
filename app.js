@@ -19,7 +19,11 @@ app.post("/posts", (req, res) => {
 });
 // UPDATE -> aggiorno un elemento
 app.put("/posts/:id", (req, res) => {
-  res.send("Ho aggiornato un elemento");
+  res.send("Ho aggiornato un post");
+});
+// MODIFY -> modifico parzialmente un elemento
+app.patch("/posts/:id", (req, res) => {
+  res.send("Ho modificato parzialmente un post");
 });
 
 // AVVIO IL SERVER SULLA PORTA 3000 E CONTROLLO SU POSTMAN
