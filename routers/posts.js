@@ -27,3 +27,5 @@ router.patch("/posts/:id", (req, res) => {
 router.delete("/posts/:id", (req, res) => {
   res.send("Ho cancellato un post");
 });
+//ESPORTO ROUTER IN APP
+module.exports = router;
