@@ -17,6 +17,10 @@ app.get("/posts/:id", (req, res) => {
 app.post("/posts", (req, res) => {
   res.send("Ho creato un nuovo post");
 });
+// UPDATE -> aggiorno un elemento
+app.put("/posts/:id", (req, res) => {
+  res.send("Ho aggiornato un elemento");
+});
 
 // AVVIO IL SERVER SULLA PORTA 3000 E CONTROLLO SU POSTMAN
 app.listen(port, () => {
