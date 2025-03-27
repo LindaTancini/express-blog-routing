@@ -13,6 +13,11 @@ app.get("/posts", (req, res) => {
 app.get("/posts/:id", (req, res) => {
   res.send("Vedo un solo post");
 });
+// STORE -> creo un nuovo elemento
+app.post("/posts", (req, res) => {
+  res.send("Ho creato un nuovo post");
+});
+
 // AVVIO IL SERVER SULLA PORTA 3000 E CONTROLLO SU POSTMAN
 app.listen(port, () => {
   console.log(`Sono un server attivo sulla porta:${port}`);
