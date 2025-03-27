@@ -9,6 +9,10 @@ const port = 3000;
 app.get("/posts", (req, res) => {
   res.send("Vedo tutti i post");
 });
+// SHOW -> visualizzo un solo elemento
+app.get("/posts/:id", (req, res) => {
+  res.send("Vedo un solo post");
+});
 // AVVIO IL SERVER SULLA PORTA 3000 E CONTROLLO SU POSTMAN
 app.listen(port, () => {
   console.log(`Sono un server attivo sulla porta:${port}`);
