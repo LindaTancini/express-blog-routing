@@ -4,32 +4,11 @@ const express = require("express");
 const app = express();
 // DEFINISCO LA PORTA
 const port = 3000;
-// CREO LE ROTTE CRUD
-// INDEX -> visualizzo tutti gli elementi
-app.get("/posts", (req, res) => {
-  res.send("Vedo tutti i post");
-});
-// SHOW -> visualizzo un solo elemento
-app.get("/posts/:id", (req, res) => {
-  res.send("Vedo un solo post");
-});
-// STORE -> creo un nuovo elemento
-app.post("/posts", (req, res) => {
-  res.send("Ho creato un nuovo post");
-});
-// UPDATE -> aggiorno un elemento
-app.put("/posts/:id", (req, res) => {
-  res.send("Ho aggiornato un post");
-});
-// MODIFY -> modifico parzialmente un elemento
-app.patch("/posts/:id", (req, res) => {
-  res.send("Ho modificato parzialmente un post");
-});
-// DESTROY -> cancello un elemento
-app.delete("/posts/:id", (req, res) => {
-  res.send("Ho cancellato un post");
-});
 
+// IMPORTO IL ROUTER DOVE SONO PRESENTI I POSTS
+const postsRouter = require("./routers/posts");
+// CON USE INDICO LE ROTTE POSTS
+app.use("/posts", postsRouter);
 // AVVIO IL SERVER SULLA PORTA 3000 E CONTROLLO SU POSTMAN
 app.listen(port, () => {
   console.log(`Sono un server attivo sulla porta:${port}`);
